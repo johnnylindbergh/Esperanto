@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var storedMessages = {};
+	function reload () {
+	$.get("http://localhost:8080/messages",
+	function(d){
+		console.log(d)
+		if (storedMessages[d['id']] === undefined){
+	$('#feed').prepend(d['message'],"</br>");
+		storedMessages[d['id']] = 1;
+
+	}
+	});
+
+}
+setInterval(reload, 1000);
+</script>
+<div id = "feed">
+<div id="contact">
+	<h1>Send a message</h1>
+	<form  method="POST">
+			<label for="name">Message:</label>
+			<input type="text" id="name" name="name" placeholder="Enter your message" />
+			<input type="submit" value="Send message" />
+	</form>
+</div>
+
+</html>

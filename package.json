@@ -1,0 +1,18 @@
+{
+  "name": "Chatroom",
+  "description": "A web-based chatroom server.",
+  "version": "0.0.1",
+  "dependencies": {
+    "any-db": "2.1.x",
+    "any-db-sqlite3": "*",
+    "consolidate": "0.13.x",
+    "express": "3.0.*",
+    "google-auth-library": "^0.10.0",
+    "googleapis": "^17.1.0",
+    "hogan.js": "3.0.x",
+    "mustache": "*",
+    "mustache-express": "*",
+    "sqlite3": "3.1.x",
+    "google-translate-api-nodejs-client": "*"
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/roomStyle.css">
+	
+	<!-- 	<div class="video-background"> -->
+<!-- 		<div class="video-foreground"> -->
+<!-- 			<iframe src="https://www.youtube.com/embed/iq_d8VSM0nw?controls=0&showinfo=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+</head>
+
+<body>
+	<div id="big"> 
+	Chatroom  
+	</div>
+	
+	<title>Chatroom</title>
+	
+		<center>
+					<div id="myModal" class="pop">
+
+					<!-- Modal content -->
+					<div class="pop-content">
+						<h3>Please Enter a Username and a prefered language</h3>
+						<form id='messageForm' onsubmit="sub();" method="post">
+							<h1>{{room}}</h1>
+								<label for="name">Message:</label>
+								<input type="text" id="username" name="username" placeholder="" />
+								<select id="lang" name="language">
+									<option value="en">English</option>
+									<option value="es">Spanish</option>
+									<option value="fr">French</option>
+									<option value="zh-CN">Chinese</option>
+									<option value="hi">Hindi</option>
+									<option value="ar">Arabic</option>
+									<option value="pt">Portuguese</option>
+									<option value="ru">Russian</option>
+									<option value="de">German</option>
+								</select>
+								<input type='button'  value="Go" onclick="$('.pop').css({
+									'display': 'none'
+								    });"></button>
+								</br>
+								
+						
+
+						
+					</div>
+
+				</div>
+				</br>
+					
+					<div id = "chat">
+					
+					<div id="chatInput">
+<!-- 					<form action= "/room/{{room}}/" method="post"> -->
+						<h1>{{room}}</h1>
+							<label for="name">Message:</label>
+							<input type="text" id="name" name="name" placeholder="Enter your message" />
+							<input type="submit" value="Send message" />
+					</form>
+					</div>
+
+
+					</div>
+					
+					
+
+					
+				
+					
+	
+	</center>
+
+<script type="text/javascript" src="chat.js"></script>
+
+<script type="text/javascript">
+setInterval(reload("{{room}}"), 1000);
+</script>
+
+</body>
+
+</html>
