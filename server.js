@@ -46,7 +46,7 @@ function translate(source, target, text) {
 	
 var result = ''
 new GoogleTranslate({
-	API_KEY:"AIzaSyB2pGbsK1wnw4Qhmd2zj9okdkT55zOjqsE"
+	API_KEY:""
 })
 .translate({
 	source:source,
